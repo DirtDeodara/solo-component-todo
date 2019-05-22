@@ -1,2 +1,26 @@
-import Component from './Component,js';
-import
+import Component from './Component.js';
+import TaskItem from './TaskItem.js';
+
+class ToDoList extends Component {
+
+    render() {
+        const list = this.renderDOM();
+        const tasks = this.props.tasks;
+
+        tasks.forEach(task => {
+            const taskItem = new TaskItem({ task });
+            const taskItemDOM = taskItem.render();
+            list.appendChild(taskItemDOM);
+        });
+        return list;
+    }
+
+    renderTemplate() {
+        return /*html*/ `
+            <ul id="tasks"></ul>
+        `;
+    }
+
+}
+
+export default ToDoList;
