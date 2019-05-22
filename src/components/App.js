@@ -25,7 +25,16 @@ class App extends Component {
         const addTaskDOM = addTask.render();
         main.appendChild(addTaskDOM);
         
-        const toDoList = new ToDoList({ tasks });
+        const toDoList = new ToDoList({ 
+            tasks,
+            onRemove: (taskToRemove) => {
+                const index = tasks.indexOf(taskToRemove);
+                tasks.splice(index, 1);
+
+                toDoList.update({ tasks });
+            }
+        });
+
         
         const toDoListDOM = toDoList.render();
         main.appendChild(toDoListDOM);

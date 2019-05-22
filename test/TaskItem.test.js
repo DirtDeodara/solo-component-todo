@@ -14,6 +14,7 @@ test('Task html is correct', assert => {
     <li>
         <p>${task.task}</p>
         <input class="checkbox" type="checkbox" name="completed">
+        <button class="remove-button"><img src="../../assets/remove.png" alt=""></button>
     </li>
     `;
     
