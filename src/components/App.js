@@ -1,8 +1,10 @@
 import Component from './Component';
-
+import Header from './Header.js';
 
 
 class App extends Component {
+
+    render()
 
     renderTemplate() {
         return /*html*/`
@@ -16,3 +18,5 @@ class App extends Component {
         `;
     }
 }
+
+export default App;
