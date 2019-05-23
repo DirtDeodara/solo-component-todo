@@ -8,10 +8,23 @@ const tasks = [
         completed: false
     },
     {
-        task: 'Replace static data with dynamically driven data',
+        task: 'Create the filter function',
         completed: false
     },
-    
+    {
+        task: 'TDD the filter function',
+        completed: false
+    },
+    {
+        task: 'Build Filter Component',
+        completed: false
+    },
+    {
+        task: 'Pass Callback from App to Filter',
+        completed: false
+    },
+
+
 ];
 
 export default tasks;

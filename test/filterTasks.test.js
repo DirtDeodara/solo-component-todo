@@ -9,11 +9,23 @@ const tasks = [
         completed: false
     },
     {
-        task: 'tdd your template function',
+        task: 'TDD your template function',
         completed: false
     },
     {
-        task: 'Replace static data with dynamically driven data',
+        task: 'Create the filter function',
+        completed: false
+    },
+    {
+        task: 'TDD the filter function',
+        completed: false
+    },
+    {
+        task: 'Build Filter Component',
+        completed: false
+    },
+    {
+        task: 'Pass Callback from App to Filter',
         completed: false
     }
 ];
@@ -29,8 +41,13 @@ test('filters a task name', assert => {
     
     // assert
     assert.deepEqual(filtered, [{
-        task: 'tdd your template function',
+        task: 'TDD your template function',
         completed: false
+    },
+    {
+        task: 'TDD the filter function',
+        completed: false
+        
     }]);
 });
 
@@ -45,7 +62,11 @@ test('test that uppercase gets turned into lower case', assert => {
 
     // assert
     assert.deepEqual(filtered, [{
-        task: 'tdd your template function',
+        task: 'TDD your template function',
+        completed: false
+    },
+    {
+        task: 'TDD the filter function',
         completed: false
     }]);
 });
@@ -64,11 +85,23 @@ test('no text input returns all tasks', assert => {
         completed: false
     },
     {
-        task: 'tdd your template function',
+        task: 'TDD your template function',
         completed: false
     },
     {
-        task: 'Replace static data with dynamically driven data',
+        task: 'Create the filter function',
+        completed: false
+    },
+    {
+        task: 'TDD the filter function',
+        completed: false
+    },
+    {
+        task: 'Build Filter Component',
+        completed: false
+    },
+    {
+        task: 'Pass Callback from App to Filter',
         completed: false
     }]);
 });

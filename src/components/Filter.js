@@ -1,4 +1,5 @@
 import Component from './Component.js';
+import filterTasks from '../filterTasks.js'
 
 class Filter extends Component {
     
@@ -15,7 +16,9 @@ class Filter extends Component {
     renderTemplate() {
         return /*html*/ `
         <section class="filter-section">
+
             <input class="filter" name="task-filter" placeholder="Search for a task">
+
             <div>
                 <input type="radio" class="filter" name="all">
                 <label>All Tasks</label>
