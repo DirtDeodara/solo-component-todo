@@ -11,6 +11,7 @@ const tasks = [
         task: 'Replace static data with dynamically driven data',
         completed: false
     },
+    
 ];
 
 export default tasks;
