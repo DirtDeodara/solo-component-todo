@@ -1,0 +1,10 @@
+.filter-form {
+    border: 1px solid rgb(197, 190, 190);
+    margin: 40px;
+    background-color: rgb(236, 204, 162);
+}
+
+#search-bar {
+    border: 1px solid black;
+    height: 20px;
+}

@@ -21,18 +21,18 @@ class Filter extends Component {
         <section>
             <form id="form" class="filter-form">
 
-                <input id="text" type="text" class="filter" name="task-filter" placeholder="Search for a task">
+                <input id="search-bar" type="text" class="filter" name="task-filter" placeholder=" Search for a task">
 
                 <div>
-                    <input type="radio" class="filter" name="radio" value="all" checked>
+                    <input type="radio" class="checkbox" name="radio" value="all" checked>
                     <label>All Tasks</label>
                 </div>
                 <div>
-                    <input type="radio" class="filter" name="radio" value="true" >
+                    <input type="radio" class="checkbox" name="radio" value="true" >
                     <label>Completed Tasks</label>
                 </div>
                 <div>
-                    <input type="radio" class="filter" name="radio" value="false" >
+                    <input type="radio" class="checkbox" name="radio" value="false" >
                     <label>Not Completed</label>
                 </div>
             </form>

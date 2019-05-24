@@ -1,5 +1,7 @@
 body {
     background-color: antiquewhite;
+    font-family: 'Josefin Slab', serif;
+    padding: 2em;
 }
 
 h1 {
@@ -25,13 +27,26 @@ ul {
     list-style-type: none;
 }
 
-#input {
-    background-color: rgb(248, 238, 225);
-    border: none;
-    height: 20px;
-}
-
 button {
     background: none;
     border: none;
+}
+
+li {
+    border: 1px solid rgb(194, 192, 192);
+    margin: 2px;
+    margin-right: 40px;
+}
+
+#completedText{
+    font-size: .7em;
+}
+
+.remove-button {
+    position: relative;
+    float: right;
+}
+
+#search-bar {
+    margin: 20px;
 }

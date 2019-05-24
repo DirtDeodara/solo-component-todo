@@ -16,8 +16,9 @@ test('Task html is correct', assert => {
         checked = 'checked';
     }
     const expected = /*html*/ `
-    <li>
+    <li id="list-item">
         <p>${task.task}</p>
+        <label id="completedText">Done</label>
         <input class="checkbox" type="checkbox" name="completed" ${checked}>
         <button class="remove-button"><img src="../../assets/remove.png" alt=""></button>
     </li>

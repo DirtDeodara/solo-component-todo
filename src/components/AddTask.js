@@ -29,8 +29,8 @@ class AddTask extends Component {
     renderTemplate() {
         return /*html*/ `
             <form class="add-task">
-                <label><input id="input" name="task" placeholder="New Task..."></label>
-                <button><img src="../../assets/plus.png" alt=""></button>
+            <button id="add-button" ><img src="../../assets/plus.png" alt=""></button>
+            <label><input id="input" name="task" placeholder=" New Task..."></label>
             </form>
         `;
     }

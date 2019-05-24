@@ -31,9 +31,10 @@ class TaskItem extends Component {
         }
         const task = this.props.task;
         return /*html*/ `
-        <li>
+        <li id="list-item">
             <p>${task.task}</p>
-            <input id="checkbox" class="checkbox" type="checkbox" name="completed" ${checked}>
+            <label id="completedText">Done</label>
+            <input  class="checkbox" type="checkbox" name="completed" ${checked}>
             <button class="remove-button"><img src="../../assets/remove.png" alt=""></button>
         </li>
         `;

@@ -1,0 +1,9 @@
+
+.add-task {
+    display: flex;
+    flex-direction: column;
+}
+#input {
+    border: 1px solid black;
+    height: 20px;
+}
