@@ -39,7 +39,6 @@ test('filters a task name', assert => {
     
     // act
     const filtered = filterTasks(tasks, filter);
-    console.log(filtered);
 
     // assert
     assert.deepEqual(filtered, [{
