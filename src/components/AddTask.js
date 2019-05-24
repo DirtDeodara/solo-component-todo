@@ -13,6 +13,7 @@ class AddTask extends Component {
 
             const newTask = {
                 task: formData.get('task'),
+                completed: false
             };
 
             onAdd(newTask);

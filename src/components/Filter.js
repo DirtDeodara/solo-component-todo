@@ -1,36 +1,41 @@
 import Component from './Component.js';
-import filterTasks from '../filterTasks.js'
 
 class Filter extends Component {
     
     render() {
         const dom = this.renderDOM();
-        const input = dom.querySelector('input');
-        input.addEventListener('input', () => {
+        const form = dom.querySelector('form');
+        const input = dom.querySelector('#text');
+        form.addEventListener('input', () => {
+            const completed = form.elements['radio'].value;
             this.props.onFilter({
-                text: input.value
+                text: input.value,
+                completed: completed
             });
         });
         return dom;
     }
+
     renderTemplate() {
         return /*html*/ `
-        <section class="filter-section">
+        <section>
+            <form id="form" class="filter-form">
 
-            <input class="filter" name="task-filter" placeholder="Search for a task">
+                <input id="text" type="text" class="filter" name="task-filter" placeholder="Search for a task">
 
-            <div>
-                <input type="radio" class="filter" name="all">
-                <label>All Tasks</label>
-            </div>
-            <div>
-                <input type="radio" class="filter" name="completed">
-                <label>Completed Tasks</label>
-            </div>
-            <div>
-                <input type="radio" class="filter" name="not-completed">
-                <label>Not Completed</label>
-            </div>
+                <div>
+                    <input type="radio" class="filter" name="radio" value="all" checked>
+                    <label>All Tasks</label>
+                </div>
+                <div>
+                    <input type="radio" class="filter" name="radio" value="true" >
+                    <label>Completed Tasks</label>
+                </div>
+                <div>
+                    <input type="radio" class="filter" name="radio" value="false" >
+                    <label>Not Completed</label>
+                </div>
+            </form>
         </section>
         `;
     }
