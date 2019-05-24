@@ -17,11 +17,11 @@ const tasks = [
     },
     {
         task: 'Build Filter Component',
-        completed: true
+        completed: false
     },
     {
         task: 'Pass Callback from App to Filter',
-        completed: true
+        completed: false
     },
 
 

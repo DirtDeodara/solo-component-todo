@@ -5,7 +5,7 @@ class Filter extends Component {
     render() {
         const dom = this.renderDOM();
         const form = dom.querySelector('form');
-        const input = dom.querySelector('#text');
+        const input = dom.querySelector('#search-bar');
         form.addEventListener('input', () => {
             const completed = form.elements['radio'].value;
             this.props.onFilter({

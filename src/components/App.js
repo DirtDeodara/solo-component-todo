@@ -52,7 +52,7 @@ class App extends Component {
                 const index = tasks.indexOf(taskToUpdate);
 
                 const task = tasks[index];
-                task.completed = true;
+                task.completed = !task.completed;
 
                 toDoList.update({ tasks });
             }
