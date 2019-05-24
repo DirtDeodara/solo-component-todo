@@ -10,10 +10,15 @@ test('Task html is correct', assert => {
         task: 'Create a static example of your todo list',
         completed: true
     };
+    let checked = '';
+
+    if(task.completed) {
+        checked = 'checked';
+    }
     const expected = /*html*/ `
     <li>
         <p>${task.task}</p>
-        <input class="checkbox" type="checkbox" name="completed" ${task.completed}>
+        <input class="checkbox" type="checkbox" name="completed" ${checked}>
         <button class="remove-button"><img src="../../assets/remove.png" alt=""></button>
     </li>
     `;

@@ -33,28 +33,33 @@ const tasks = [
 test('filters a task name', assert => {
     // arrange
     const filter = {
-        text: 'tdd'
+        text: 'tdd',
+        completed: ''
     };
     
     // act
     const filtered = filterTasks(tasks, filter);
-    
+    console.log(filtered);
+
     // assert
     assert.deepEqual(filtered, [{
         task: 'TDD your template function',
         completed: false
+        
     },
     {
         task: 'TDD the filter function',
         completed: false
-        
+       
     }]);
+    
 });
 
 test('test that uppercase gets turned into lower case', assert => {
     // arrange
     const filter = {
-        text: 'TDD'
+        text: 'TDD',
+        completed: ''
     };
 
     // act
@@ -74,7 +79,8 @@ test('test that uppercase gets turned into lower case', assert => {
 test('no text input returns all tasks', assert => {
    // arrange
     const filter = {
-        text: ''
+        text: '',
+        completed: 'all'
     };
     // act
     const filtered = filterTasks(tasks, filter);

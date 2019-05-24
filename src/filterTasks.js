@@ -14,9 +14,11 @@ function filterTasks(tasks, filter) {
         let status = isCompleted.includes(completed);
         if(completed === 'all') {
             status = true;
+            
         }
-        return hasTask && status;
+        return hasTask && status;       
     });
 }
+
 
 export default filterTasks;

@@ -5,7 +5,6 @@ import tasks from '../../data/tasks.js';
 import AddTask from '../components/AddTask.js';
 import Filter from './Filter.js';
 import filterTasks from '../filterTasks.js';
-// import filterTasks from '../filterTasks.js';
 
 class App extends Component {
 
@@ -42,9 +41,18 @@ class App extends Component {
         
         const toDoList = new ToDoList({ 
             tasks,
+            
             onRemove: (taskToRemove) => {
                 const index = tasks.indexOf(taskToRemove);
                 tasks.splice(index, 1);
+
+                toDoList.update({ tasks });
+            },
+            onUpdate: (taskToUpdate) => {
+                const index = tasks.indexOf(taskToUpdate);
+
+                const task = tasks[index];
+                task.completed = true;
 
                 toDoList.update({ tasks });
             }
