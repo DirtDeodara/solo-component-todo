@@ -35,7 +35,7 @@ class TaskItem extends Component {
             <p>${task.task}</p>
             <label id="completedText">Done</label>
             <input  class="checkbox" type="checkbox" name="completed" ${checked}>
-            <button class="remove-button"><img src="../../assets/remove.png" alt=""></button>
+            <button class="remove-button">❌</button>
         </li>
         `;
     }
